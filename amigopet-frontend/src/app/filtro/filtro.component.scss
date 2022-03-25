@@ -1,0 +1,220 @@
+* {
+  font-family: "Cambria";
+  font-size: 17px;
+}
+
+#divFiltro label {
+  width: 100%;
+}
+
+select {
+  margin-bottom: 5px;
+  box-shadow: 1px 1px 2px black;
+  padding: 6px;
+  margin-left: 5px;
+}
+
+select:hover {
+  transition: all 0.2s ease-out;
+  border: 0px !important;
+  border-bottom: 4px solid #008080 !important;
+  color: #38440b !important;
+  font-weight: 600;
+  font-size: 17px !important;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: rgb(11, 68, 49);
+  font-weight: 600;
+  font-size: 25px !important;
+  font-family: "Courier New" !important;
+}
+
+#colunaUm {
+  margin-left: 30px;
+}
+
+#colunaDois {
+  color: white;
+  font-size: 26px !important;
+  font-weight: 600;
+  margin-top: 12%;
+}
+
+#colCad {
+  text-align: right;
+  margin-top: 10px;
+}
+
+#colCad p {
+  font-family: "Courier New" !important;
+  font-size: 23px !important;
+}
+
+#colunaDois img {
+  width: 120%;
+  margin-top: 20%;
+}
+
+#colunaDois p {
+  margin: 0px;
+}
+
+#divFiltro {
+  background: url("../../assets/wave.svg") no-repeat;
+  background-color: #008080;
+  height: 50vh;
+}
+
+button {
+  background: white;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  padding: 4px 10px 4px 10px;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 15px !important;
+  z-index: 1;
+  border: 0px;
+}
+button:hover {
+  color: white;
+}
+button::after {
+  content: "";
+  background: #000000;
+  position: absolute;
+  z-index: -1;
+  display: block;
+}
+button[class^="slide"]::after {
+  transition: all 0.35s;
+}
+button[class^="slide"]:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+button.slide_from_left::after {
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+}
+
+* {
+    font-family: 'Cambria';
+    font-size: 17px;
+  }
+
+
+#divFiltro label {
+  width: 100%;
+}
+
+select {
+  margin-bottom: 5px;
+  box-shadow: 1px 1px 2px black;
+  padding: 6px;
+  margin-left: 5px;
+}
+
+select:hover {
+    transition: all .2s ease-out;
+    border: 0px !important;
+    border-bottom: 4px solid 	#008080 !important;
+    color: #38440b !important;
+    font-weight: 600;
+    font-size: 17px !important;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: rgb(11, 68, 49);
+  font-weight: 600;
+  font-size: 25px !important;
+  font-family: 'Courier New'!important;
+}
+
+#colunaUm {
+  margin-left: 30px;
+}
+
+#colunaDois {
+  color: white;
+  font-size: 26px !important;
+  font-weight: 600;
+  margin-top: 12%;
+}
+
+#colCad {
+    text-align: right;
+    margin-top: 10px;
+}
+
+#colCad p {
+  font-family: 'Courier New' !important;
+  font-size: 23px !important;
+}
+
+#colunaDois img {
+  width: 120%;
+  margin-top: 20%;
+}
+
+#colunaDois p {
+  margin: 0px;
+}
+
+#divFiltro {
+  background: url("../../assets/wave.svg") no-repeat;
+  background-color: #008080;
+  height: 50vh;
+}
+
+button {
+  background: white;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  padding: 4px 10px 4px 10px;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 15px !important;
+  z-index: 1;
+  border: 0px;
+}
+button:hover {
+  color: white;
+}
+button::after {
+  content: "";
+  background: #000000;
+  position: absolute;
+  z-index: -1;
+  display: block;
+}
+button[class^="slide"]::after {
+  transition: all 0.35s;
+}
+button[class^="slide"]:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+button.slide_from_left::after {
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+}

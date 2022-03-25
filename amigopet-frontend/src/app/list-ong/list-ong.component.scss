@@ -1,0 +1,72 @@
+#principal {
+    border-top: 4px solid  #e2b144;
+    margin-top: 0px !important;
+}
+
+.card {
+    width: 100%;
+    max-height: 50vh !important;
+    margin-bottom: 100px !important;
+    background-color: #008080;
+}
+
+.card:hover {
+    background-color: #0c494d;
+}
+
+h3, h4 {
+    color: white;
+    margin-top: 10px;
+}
+
+h3 {
+    padding-left: 30px;
+    height: 1.5em;
+}
+
+h4 {
+    margin-bottom: 14px;
+    padding-left: 10px;
+    height: 1.5em;
+}
+
+#ladoUm {
+    background-color: white;
+    height: 100%;
+    padding: 30px;
+    border-bottom: 4px solid white;
+}
+
+#ladoUm:hover {
+    border-bottom: 4px solid black;
+}
+
+#ladoDois:hover {
+    border-bottom: 4px solid black;
+}
+
+#ladoDois {
+    background-color: white;
+    height: 100%;
+    padding: 30px;
+    border-bottom: 4px solid white;
+}
+
+h3 {
+    font-weight: 900;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    margin-bottom: 100px;
+}
+
+.card:hover {
+    opacity: 0.7;
+}
+
+p {
+    width: 100%;
+}
+

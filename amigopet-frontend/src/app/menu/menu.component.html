@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-md">
+  <span routerLink="/home" style="cursor: pointer"
+    ><img src="../../assets/logocerta3.png" id="logo" alt="AmigoPet"
+  /></span>
+  <button
+    class="navbar-toggler"
+    type="button"
+    aria-controls="navbarContent"
+    [attr.aria-expanded]="!collapsed"
+    aria-label="Toggle navigation"
+    (click)="collapsed = !collapsed"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a
+          tabindex="0"
+          routerLink="/cadastroAnimal"
+          id="navbarDropdown2"
+          role="button"
+        >
+          Doar Pet
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          tabindex="0"
+          routerLink="/listdicas"
+          id="navbarDropdown2"
+          role="button"
+        >
+          Dicas
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a tabindex="0" routerLink="/listong" id="navbarDropdown2" role="button"> Ongs </a>
+      </li>
+
+      <li class="nav-item">
+        <a tabindex="0" routerLink="/sobre" id="navbarDropdown2" role="button">
+          Sobre
+        </a>
+      </li>
+
+      <li>
+        <a tabindex="0" routerLink="/login" id="navbarDropdown2" role="button" id="btnCadastro"  *ngIf="!logged"> Login </a>
+      </li>
+
+      <li class="nav-item" ngbDropdown display="dynamic"  *ngIf="logged">
+        <a tabindex="0" ngbDropdownToggle role="button">
+          <i class="far fa-user"></i>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+          <span><a routerLink="/meuperfil" ngbDropdownItem>Meu perfil</a></span>
+          <span><a routerLink="/cadastroAnimal" ngbDropdownItem>Doar</a></span>
+          <span><a routerLink="/pets/{{user.id}}" ngbDropdownItem>Pets</a></span>
+          <span><a ngbDropDownItem (click)="logoff()"> Deslogar</a> </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

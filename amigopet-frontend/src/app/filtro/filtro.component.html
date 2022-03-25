@@ -1,0 +1,89 @@
+<div id="divFiltro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h3> Encontre seu parceiro</h3>
+                    </div>
+                    <div class="col-md-5">
+                        <button type="submit" class="slide_from_left" (click)="filtrar()">Filtrar</button>
+                    </div>
+                </div>
+                <form action="" id="filtroAnimal">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label for="estado"> Selecione um estado</label>
+                                <select name="estado" [(ngModel)]="idEstadoSelecionado"(change)="buscarCidade()">
+                                    <option  value="0"> Selecione</option>
+                                    <option *ngFor="let estado of estados | async" value="{{estado.id}}">{{estado.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <label for="cidade"> Selecione uma cidade</label>
+                                <select name="cidade" [(ngModel)]="idCidadeSelecionada">
+                                    <option value="0"> Selecione</option>
+                                    <option *ngFor="let cidade of cidades |async"  value="{{cidade.id}}">{{cidade.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <label for="porte"> Porte</label>
+                                <select name="porte" [(ngModel)]="animal.porte">
+                                    <option value="0"> Selecione</option>
+                                    <option value="Pequeno">Pequeno</option>
+                                    <option value="Medio">Médio</option>
+                                    <option value="Grande">Grande</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <label for="especie"> Especie</label>
+                                <select name="especie" [(ngModel)]="animal.tipo">
+                                    <option value="0"> Selecione</option>
+                                    <option value="Gato">Gato</option>
+                                    <option value="Cachorro">Cachorro</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label for="sexo"> Sexo </label>
+                                <select name="sexo" [(ngModel)]="animal.sexo">
+                                    <option value="0"> Selecione</option>
+                                    <option value="Fêmea">Fêmea</option>
+                                    <option value="Macho">Macho</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <label for="idade"> Idade</label>
+                                <select name="idade" [(ngModel)]="animal.idade">
+                                    <option value="0"> Selecione</option>
+                                    <option value="Filhote"> Filhote</option>
+                                    <option value="Adulto"> Adulto </option>
+                                    <option value="Idoso"> Idoso</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-5" id="colunaDois">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../../assets/bixinhos.png" alt="">
+                    </div>
+                    <div class="col-md-6" id="colCad">
+                        <p>Tem um amigo precisando de um lar?</p>
+                        <button type="submit" routerLink="/cadastroAnimal" class="slide_from_left">Cadastrar Animal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="container-fluid" id="principal">
+    <div class="container">
+        <div class="card cadastro-card">
+            <div class="row no-gutters">
+                <div class="col-md-5">
+                    <img src="../../assets/papagaio.jpg" alt="cadastro" class="cadastro-card-img">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h3>Editar Pet</h3>
+                        <form action="cadastro" method="post">
+                            <div class="form-group">
+                                <label for="text" class="sr-only"> </label>
+                                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" [(ngModel)]="animal.nome">
+                            </div>
+                            <div>
+                                <label for="Especie" class="sr-only"></label>
+                                <input type="text" name="Especie" id="especie" class="form-control"
+                                    placeholder="Especie" [(ngModel)]="animal.tipo">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="raca" class="sr-only"></label>
+                                <input type="text" name="raca" id="raca" class="form-control" placeholder="Raça" [(ngModel)]="animal.raca">
+                            </div>
+                            <div>
+                                <label for="idade" class="sr-only"></label>
+                                <input type="number" name="idade" id="idade" class="form-control" placeholder="idade" [(ngModel)]="animal.idade">
+                            </div>
+                            <div>
+                                <label for="descricao" class="sr-only"></label>
+                                <input type="text" name="descricao" id="descricao" class="form-control"
+                                    placeholder="descricao" [(ngModel)]="animal.descricao">
+                            </div>
+                            <div>
+                              <select name="estado" [(ngModel)]="animal.status" class="selects">
+                                  <option value="A"> Ativo</option>
+                                  <option value="D"> Doado</option>
+                              </select>
+                          </div>
+                            <div>
+                                <select name="estado" [(ngModel)]="idEstadoSelecionado" (change)="buscarCidade()"
+                                    class="selects">
+                                    <option value="0"> Selecione</option>
+                                    <option *ngFor="let estado of estados | async" value="{{estado.id}}">{{estado.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div>
+                                <select name="cidade" class="selects">
+                                    <option> Selecione</option>
+                                    <option *ngFor="let cidade of cidades |async" value="{{cidade.id}}">{{cidade.nome}}
+                                    </option>
+                                </select>
+                            </div>
+                            <input type="submit" id="cadastro" class="btn btn-block cadastro-btn mb-4" type="button" (click)="salvar()"
+                                value="Salvar">
+                        </form>
+                        <nav class="cadastro-card-footer-nav">
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

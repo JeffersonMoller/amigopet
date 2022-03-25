@@ -1,0 +1,106 @@
+#principal {
+  border-top: 4px solid #e2b144;
+  margin-top: 0px !important;
+}
+
+img {
+  border-radius: 10px 10px 0px 0px;
+}
+
+img:hover {
+  opacity: 0.8;
+}
+
+a {
+  color: inherit;
+}
+
+.card {
+  border-radius: 10px;
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 5%;
+  border: 1px solid rgb(189, 187, 187);
+  border-bottom: 4px solid white;
+}
+
+.card:hover {
+  border-bottom: 4px solid black;
+}
+
+#principal {
+  margin-top: 10vh;
+  margin-bottom: 10%;
+}
+
+#grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+button {
+  background: #ffa600;
+  color: white;
+  padding: 4px 10px 4px 10px;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 1em;
+  padding: 5px;
+  border: 0px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-right: 5px;
+}
+button:hover {
+  color: white;
+}
+
+button::after {
+  content: "";
+  background: #008080;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+
+button[class^="grow"]::after {
+  transition: all 0.3s ease;
+}
+button[class^="grow"]:hover::after {
+  transition: all 0.3s ease-out;
+}
+
+button.grow_skew_forward::after {
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+}
+button.grow_skew_forward:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+}
+
+#filtro {
+    max-height: 20%;
+    background-color: #008080;
+    margin: 0px;
+    padding: 20px;
+}
+
+.col-md-8 {
+    text-align: center;
+    color: white;
+    display: inline-block;
+    margin-left: -7%;
+}
+
+#titulo {
+    font-size: 1.7em;
+    font-weight: 600;
+    margin-right: 10px;
+}

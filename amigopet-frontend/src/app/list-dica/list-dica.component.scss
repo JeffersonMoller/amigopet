@@ -1,0 +1,82 @@
+#principal {
+  border-top: 4px solid #e2b144;
+  margin-top: 0px !important;
+}
+
+.card {
+  width: 100%;
+  max-height: 50vh !important;
+  margin-bottom: 25px !important;
+  padding-right: 10%;
+}
+
+img {
+  max-height: 40vh;
+}
+
+#conteudo {
+  margin-top: 6%;
+}
+
+h3 {
+  font-weight: 900;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.card:hover {
+  opacity: 0.7;
+}
+
+button {
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 4px 10px 4px 10px;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 15px !important;
+  z-index: 1;
+  border: 0px;
+  margin-right: 5px;
+  background-color: green;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+}
+
+button[class^="slide"]::after {
+  transition: all 0.35s;
+}
+
+button[class^="slide"]:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+
+button.slide_from_left::after {
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+}
+
+button::after {
+  content: "";
+  background: rgb(63, 105, 76);
+  position: absolute;
+  z-index: -1;
+  display: block;
+}
+
+#botao {
+  margin-bottom: 3%;
+}
