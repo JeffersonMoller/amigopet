@@ -8,9 +8,8 @@ describe('AddDicaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddDicaComponent ]
-    })
-    .compileComponents();
+      declarations: [AddDicaComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

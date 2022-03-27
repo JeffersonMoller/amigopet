@@ -3,7 +3,7 @@
 }
 
 .container-fluid {
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
 .card {
@@ -57,7 +57,7 @@ button.slide_from_left::after {
 
 button::after {
   content: "";
-  background:#008080;
+  background: #008080;
   position: absolute;
   z-index: -1;
   display: block;
