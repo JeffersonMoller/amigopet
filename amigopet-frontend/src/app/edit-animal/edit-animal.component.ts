@@ -3,9 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Animal } from '../beans/Animal';
-import { Cidade } from '../beans/Cidade';
-import { Estado } from '../beans/Estado';
+import { Animal } from '../core/interfaces/Animal';
+import { Cidade } from '../core/interfaces/Cidade';
+import { Estado } from '../core/interfaces/Estado';
 import { AnimalService } from '../services/animal.service';
 import { EstadoService } from '../services/estado.service';
 

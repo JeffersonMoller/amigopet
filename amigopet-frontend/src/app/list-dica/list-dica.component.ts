@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Dica } from '../beans/Dica';
+import { Dica } from '../core/interfaces/Dica';
 import { DicaService } from '../services/dica.service';
 
 @Component({

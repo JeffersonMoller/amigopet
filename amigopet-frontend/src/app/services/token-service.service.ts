@@ -1,4 +1,4 @@
-import { Usuario } from './../beans/Usuario';
+import { Usuario } from './../core/interfaces/Usuario';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import jwt_decode from 'jwt-decode';

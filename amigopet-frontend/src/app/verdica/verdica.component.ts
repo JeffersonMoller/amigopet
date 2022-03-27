@@ -1,7 +1,7 @@
 import { DicaService } from './../services/dica.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Dica } from '../beans/Dica';
+import { Dica } from '../core/interfaces/Dica';
 
 @Component({
   selector: 'app-verdica',

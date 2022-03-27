@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Animal } from '../beans/Animal';
-import { Usuario } from '../beans/Usuario';
+import { Animal } from '../core/interfaces/Animal';
+import { Usuario } from '../core/interfaces/Usuario';
 import { AnimalService } from '../services/animal.service';
 import { TokenServiceService } from '../services/token-service.service';
 

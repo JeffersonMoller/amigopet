@@ -1,6 +1,6 @@
 import { TokenServiceService } from './token-service.service';
 import { AuthService } from './auth.service';
-import { Usuario } from './../beans/Usuario';
+import { Usuario } from './../core/interfaces/Usuario';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';

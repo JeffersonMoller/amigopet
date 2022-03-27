@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { environment } from './../../environments/environment';
-import { Usuario } from './../beans/Usuario';
+import { Usuario } from './../core/interfaces/Usuario';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 

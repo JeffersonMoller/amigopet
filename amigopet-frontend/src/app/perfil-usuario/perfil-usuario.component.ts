@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Cidade } from '../beans/Cidade';
-import { Estado } from '../beans/Estado';
-import { Usuario } from '../beans/Usuario';
+import { Cidade } from '../core/interfaces/Cidade';
+import { Estado } from '../core/interfaces/Estado';
+import { Usuario } from '../core/interfaces/Usuario';
 import { EstadoService } from '../services/estado.service';
 import { TokenServiceService } from '../services/token-service.service';
 import { UsuarioService } from '../services/usuario.service';

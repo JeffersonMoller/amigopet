@@ -4,4 +4,6 @@ Versão: 1.0
 
 ============================================= ATUALIZAÇÕES =============================================
 
+27/03/2022 - Jefferson Möller - Refatorar conteudo da pasta beans : Movido o conteudo da pasta beans para core/interfaces, eliminado pasta beans e refatorado referências destes arquivos.
+
 DD/MM/AAAA - name - Title : description.

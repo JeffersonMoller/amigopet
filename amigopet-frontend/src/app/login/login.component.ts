@@ -1,7 +1,7 @@
 import { TokenServiceService } from './../services/token-service.service';
 import { Router } from '@angular/router';
 import { AuthService } from './../services/auth.service';
-import { Usuario } from './../beans/Usuario';
+import { Usuario } from './../core/interfaces/Usuario';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

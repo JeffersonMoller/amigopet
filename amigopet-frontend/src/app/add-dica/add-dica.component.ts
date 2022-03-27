@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Dica } from '../beans/Dica';
-import { Usuario } from '../beans/Usuario';
+import { Dica } from '../core/interfaces/Dica';
+import { Usuario } from '../core/interfaces/Usuario';
 import { DicaService } from '../services/dica.service';
 import { TokenServiceService } from '../services/token-service.service';
 import { UsuarioService } from '../services/usuario.service';

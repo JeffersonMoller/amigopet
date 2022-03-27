@@ -1,12 +1,12 @@
 import { TokenServiceService } from './../services/token-service.service';
 import { AnimalService } from './../services/animal.service';
-import { Animal } from './../beans/Animal';
+import { Animal } from '../core/interfaces/Animal';
 import { EstadoService } from './../services/estado.service';
-import { Estado } from './../beans/Estado';
+import { Estado } from './../core/interfaces/Estado';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { Cidade } from '../beans/Cidade';
-import { Usuario } from '../beans/Usuario';
+import { Cidade } from '../core/interfaces/Cidade';
+import { Usuario } from '../core/interfaces/Usuario';
 
 @Component({
   selector: 'app-cadastro-animal',

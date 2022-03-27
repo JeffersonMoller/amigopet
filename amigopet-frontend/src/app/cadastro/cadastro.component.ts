@@ -1,5 +1,5 @@
 import { UsuarioService } from './../services/usuario.service';
-import { Usuario } from './../beans/Usuario';
+import { Usuario } from './../core/interfaces/Usuario';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

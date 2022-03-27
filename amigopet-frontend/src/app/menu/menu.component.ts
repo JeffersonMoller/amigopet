@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { UsuarioService } from './../services/usuario.service';
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../beans/Usuario';
+import { Usuario } from '../core/interfaces/Usuario';
 import { RouterLinkActive } from '@angular/router';
 
 @Component({

@@ -2,7 +2,7 @@ import { TokenServiceService } from './token-service.service';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Animal } from '../beans/Animal';
+import { Animal } from '../core/interfaces/Animal';
 
 
 
