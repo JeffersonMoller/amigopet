@@ -1,22 +1,7 @@
-# TEMPLATE CHANGELOG (ALTERAR)
+Data de criação: 18/02/2021
+Versão: 1.0
 
-# {version}
-[{date}]
 
-### Quebras de compatibilidade
-* N/A.
+============================================= ATUALIZAÇÕES =============================================
 
-### Novas funcionalidades
-* [TASK-XXXX](link-task-jira) - Repositório criado pelo Bot Bastion do Devops
-
-### Melhorias
-* [#TASK-XXXX] - AS task também podem ser referenciadas com o # (hash) por conta da integração jira/gitlab
-
-### Correções
-* N/A.
-
-### Alterações na base de dados
-* N/A.
-
-### Alteração de dependências
-* N/A.
+DD/MM/AAAA - name - Title : description.
