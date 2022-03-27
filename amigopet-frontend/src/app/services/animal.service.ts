@@ -1,4 +1,3 @@
-import { TokenServiceService } from './token-service.service';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -10,10 +9,7 @@ import { Animal } from '../core/interfaces/Animal';
 export class AnimalService {
   private animalBehaviorSubject = new BehaviorSubject<any>(null);
 
-  constructor(
-    private http: HttpClient,
-    private tokenService: TokenServiceService
-  ) {}
+  constructor(private http: HttpClient) {}
 
   listarAnimais(): Observable<any> {
     return this.http.get(

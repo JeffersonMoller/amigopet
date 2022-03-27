@@ -33,7 +33,7 @@ export class CadastroAnimalComponent implements OnInit {
     private animalServico: AnimalService,
     private tokenService: TokenServiceService
   ) {
-    this.user$ = tokenService.getUser();
+    this.user$ = this.tokenService.getUser();
     this.user$.subscribe((resolve) => {
       this.user.id = resolve.id;
       this.user.nome = resolve.nome;

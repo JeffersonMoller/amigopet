@@ -1,5 +1,5 @@
 import { TokenServiceService } from './../services/token-service.service';
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Animal } from '../core/interfaces/Animal';
