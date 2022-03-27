@@ -1,32 +1,41 @@
 <div class="container-fluid" id="principal">
-    <div class="container mt-5" id="conteudo">
+  <div class="container mt-5" id="conteudo">
+    <div class="card col-md-8">
+      <div class="container text-center" id="card-titulo">
+        <h1>Editar Dica</h1>
+      </div>
+      <div class="container">
+        <form action="" method="">
+          <div class="form-group">
+            <label for="titulo">Título da Dica:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="titulo"
+              [(ngModel)]="dica.titulo"
+            />
+          </div>
+          <div class="form-group">
+            <label for="conteudo">Conteudo da Dica:</label>
+            <textarea
+              name="conteudo"
+              rows="5"
+              cols="85"
+              [(ngModel)]="dica.descricao"
+            ></textarea>
+          </div>
 
-            <div class="card col-md-8">
-                <div class="container text-center" id="card-titulo">
-                    <h1>Editar Dica</h1>
-                </div>
-                <div class="container">
-                    <form action="" method="">
-                        <div class="form-group">
-                            <label for="titulo">Título da Dica:</label>
-                            <input type="text" class="form-control" name="titulo" [(ngModel)]="dica.titulo">
-                        </div>
-                        <div class="form-group">
-                            <label for="conteudo">Conteudo da Dica:</label>
-                            <textarea name="conteudo" rows="5" cols="85" [(ngModel)]="dica.descricao"></textarea>
-                        </div>
+          <div class="form-group">
+            <label for="conteudo">Imagem principal da Dica:</label>
+            <br />
+            <input type="file" />
+          </div>
 
-                        <div class="form-group">
-                            <label for="conteudo">Imagem principal da Dica:</label>
-                            <br>
-                            <input type="file" />
-                        </div>
-                        
-
-                        <button type="submit" class="btn btn-success" (click)="alterarDica()">Salvar</button>
-                    </form>
-                </div>
-            </div>
-
+          <button type="submit" class="btn btn-success" (click)="alterarDica()">
+            Salvar
+          </button>
+        </form>
+      </div>
     </div>
+  </div>
 </div>

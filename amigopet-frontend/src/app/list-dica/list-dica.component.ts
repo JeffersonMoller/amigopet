@@ -7,23 +7,19 @@ import { DicaService } from '../services/dica.service';
 @Component({
   selector: 'app-list-dica',
   templateUrl: './list-dica.component.html',
-  styleUrls: ['./list-dica.component.scss']
+  styleUrls: ['./list-dica.component.scss'],
 })
 export class ListDicaComponent implements OnInit {
-
   dicas: Observable<Dica[]> = new Observable();
 
-  constructor(private router: Router, private servico: DicaService) { }
+  constructor(private router: Router, private servico: DicaService) {}
 
   ngOnInit(): void {
-  this.getDicas();
+    this.getDicas();
   }
 
   getDicas() {
     this.dicas = this.servico.getAllDicas();
-    this.dicas.subscribe(
-      resolve => console.log(resolve)
-    );
+    this.dicas.subscribe((resolve) => console.log(resolve));
   }
-
 }

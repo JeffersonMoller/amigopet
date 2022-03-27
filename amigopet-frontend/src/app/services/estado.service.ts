@@ -3,17 +3,22 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EstadoService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   buscarEstados(): Observable<any> {
-    return this.http.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
+    return this.http.get(
+      'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
+    );
   }
 
-  buscarCidade(id?:string): Observable<any> {
-    return this.http.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados/'+ id + '/municipios');
+  buscarCidade(id?: string): Observable<any> {
+    return this.http.get(
+      'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' +
+        id +
+        '/municipios'
+    );
   }
 }

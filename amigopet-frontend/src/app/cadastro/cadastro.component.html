@@ -1,45 +1,81 @@
 <div class="container-fluid" id="principal">
-    <div class="container">
-        <div class="card login-card">
-            <div class="row no-gutters">
-                <div class="col-md-5">
-                    <img src="../../assets/papagaio.jpg" alt="login" class="login-card-img">
-                </div>
-                <div class="col-md-7">
-                    <div class="card-body">
-                        <div class="brand-wrapper">
-                        </div>
-                        <p class="login-card-description">Cadastre-se</p>
-                        <form action="login" method="post">
-                            <div class="form-group">
-                                <label for="email" class="sr-only">email</label>
-                                <input type="email" [(ngModel)]="usuario.email" name="email" id="email" class="form-control" placeholder="E-mail">
-                            </div>
-                            <div>
-                                <label for="nome" class="sr-only">Nome</label>
-                                <input type="text" name="nome" [(ngModel)]="usuario.nome" id="nome" class="form-control" placeholder="Nome">
-                            </div>
-                            <div class="form-group mb-4">
-                                <label for="password" class="sr-only">Password</label>
-                                <input type="password" name="password" [(ngModel)]="usuario.senha" id="password" class="form-control"
-                                    placeholder="***********">
-                            </div>
-                            <div>
-                                <label for="telefone" class="sr-only">Telefone</label>
-                                <input type="text" name="telefone" mask="(00) 0000-00000" [(ngModel)]="usuario.celular" id="telefone" class="form-control"
-                                    placeholder="Telefone">
-                            </div>
-                            <input type="submit" id="cadastrar" class="btn btn-block login-btn mb-4" (click)="cadastrar()" type="button"
-                                value="Cadastrar">
-                        </form>
-                        <p class="login-card-footer-text"> Clique <a routerLink="/login" class="text-reset"> aqui</a>
-                            para voltar</p>
-                        <nav class="login-card-footer-nav">
-                        </nav>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="card login-card">
+      <div class="row no-gutters">
+        <div class="col-md-5">
+          <img
+            src="../../assets/papagaio.jpg"
+            alt="login"
+            class="login-card-img"
+          />
         </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <div class="brand-wrapper"></div>
+            <p class="login-card-description">Cadastre-se</p>
+            <form action="login" method="post">
+              <div class="form-group">
+                <label for="email" class="sr-only">email</label>
+                <input
+                  type="email"
+                  [(ngModel)]="usuario.email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="E-mail"
+                />
+              </div>
+              <div>
+                <label for="nome" class="sr-only">Nome</label>
+                <input
+                  type="text"
+                  name="nome"
+                  [(ngModel)]="usuario.nome"
+                  id="nome"
+                  class="form-control"
+                  placeholder="Nome"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <label for="password" class="sr-only">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  [(ngModel)]="usuario.senha"
+                  id="password"
+                  class="form-control"
+                  placeholder="***********"
+                />
+              </div>
+              <div>
+                <label for="telefone" class="sr-only">Telefone</label>
+                <input
+                  type="text"
+                  name="telefone"
+                  mask="(00) 0000-00000"
+                  [(ngModel)]="usuario.celular"
+                  id="telefone"
+                  class="form-control"
+                  placeholder="Telefone"
+                />
+              </div>
+              <input
+                type="submit"
+                id="cadastrar"
+                class="btn btn-block login-btn mb-4"
+                (click)="cadastrar()"
+                type="button"
+                value="Cadastrar"
+              />
+            </form>
+            <p class="login-card-footer-text">
+              Clique <a routerLink="/login" class="text-reset"> aqui</a> para
+              voltar
+            </p>
+            <nav class="login-card-footer-nav"></nav>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </div>

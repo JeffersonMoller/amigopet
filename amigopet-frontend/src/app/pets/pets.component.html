@@ -4,12 +4,19 @@
       <a id="titulo">Pets:</a>
       <button class="grow_skew_forward" (click)="doados()">Doados</button>
       <button class="grow_skew_forward" (click)="ativos()">Ativos</button>
-      <button class="grow_skew_forward" (click)="getAnimaisByIdUser()">Ambos</button>
+      <button class="grow_skew_forward" (click)="getAnimaisByIdUser()">
+        Ambos
+      </button>
     </div>
   </div>
 </div>
 <div class="container mt-5 mb-5">
-  <div class="card" style="width: 18rem" id="grow" routerLink="/editarDica/{{animal.id}}" *ngFor="let animal of animais | async"
+  <div
+    class="card"
+    style="width: 18rem"
+    id="grow"
+    routerLink="/editarDica/{{ animal.id }}"
+    *ngFor="let animal of animais | async"
     routerLink="/editarpet/{{ animal.id }}"
   >
     <img src="../../assets/gatoindex.jpg" class="card-img-top" />

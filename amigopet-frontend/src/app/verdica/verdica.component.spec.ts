@@ -8,9 +8,8 @@ describe('VerdicaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VerdicaComponent ]
-    })
-    .compileComponents();
+      declarations: [VerdicaComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,28 +1,29 @@
 import { EstadoService } from './../services/estado.service';
 import { Estado } from './../core/interfaces/Estado';
-import { Observable, Subscriber } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { Cidade } from '../core/interfaces/Cidade';
-import { AnimationAnimateChildMetadata } from '@angular/animations';
 import { Animal } from '../core/interfaces/Animal';
 import { AnimalService } from '../services/animal.service';
 
 @Component({
   selector: 'app-filtro',
   templateUrl: './filtro.component.html',
-  styleUrls: ['./filtro.component.scss']
+  styleUrls: ['./filtro.component.scss'],
 })
 export class FiltroComponent implements OnInit {
-
-  constructor(private estadoServico: EstadoService, private animalServico: AnimalService) { }
+  constructor(
+    private estadoServico: EstadoService,
+    private animalServico: AnimalService
+  ) {}
 
   estados: Observable<Estado[]> = new Observable();
   cidades: Observable<Cidade[]> = new Observable();
   idEstadoSelecionado: string = '0';
   idCidadeSelecionada: string = '0';
 
-  animal:Animal = {porte: "0", sexo: "0", idade: "0", tipo: "0"};
-  animais: Observable<any[]> = new Observable
+  animal: Animal = { porte: '0', sexo: '0', idade: '0', tipo: '0' };
+  animais: Observable<any[]> = new Observable();
   ngOnInit(): void {
     this.buscar();
   }
@@ -31,25 +32,21 @@ export class FiltroComponent implements OnInit {
     this.estados = this.estadoServico.buscarEstados();
   }
 
-
   buscarCidade() {
     this.cidades = this.estadoServico.buscarCidade(this.idEstadoSelecionado);
-    this.cidades.subscribe(
-      resolve => console.log(resolve)
-    );
+    this.cidades.subscribe((resolve) => console.log(resolve));
   }
 
-  filtrar(){
+  filtrar() {
     this.animal.estado = this.idEstadoSelecionado;
     this.animal.cidade = this.idCidadeSelecionada;
     this.animalServico.filtarAnimal(this.animal).subscribe(
-      resolve => {
+      (resolve) => {
         console.log(resolve);
         this.animalServico.setAnimais(resolve);
         this.animais = this.animalServico.getAnimais();
-      }
-      ,
-      error => {
+      },
+      (error) => {
         console.error(error);
       }
     );

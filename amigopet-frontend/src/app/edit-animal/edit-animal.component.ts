@@ -1,5 +1,4 @@
 import { TokenServiceService } from './../services/token-service.service';
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -26,13 +25,12 @@ export class EditAnimalComponent implements OnInit {
     private estadoServico: EstadoService,
     private animalServico: AnimalService,
     private tokenServico: TokenServiceService,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.buscar();
-    this.getAnimalById(this.route.snapshot.paramMap.get('id'))
-
+    this.getAnimalById(this.route.snapshot.paramMap.get('id'));
   }
 
   buscar() {
@@ -44,34 +42,31 @@ export class EditAnimalComponent implements OnInit {
     this.cidades.subscribe((resolve) => console.log(resolve));
   }
 
-  getAnimalById(id:any){
-    this.animalServico.getAnimalById(id).subscribe(
-      (data:any) => {
-        this.animal.id = data.id;
-        this.animal.nome = data.nome;
-        this.animal.tipo = data.tipo;
-        this.animal.raca = data.raca;
-        this.animal.idade = data.idade;
-        this.animal.descricao = data.descricao;
-        this.animal.estado = data.estado;
-        this.animal.cidade = data.cidade;
-        this.animal.sexo = data.sexo;
-        this.animal.porte = data.porte;
-        this.animal.status = data.status;
-      }
-    );
+  getAnimalById(id: any) {
+    this.animalServico.getAnimalById(id).subscribe((data: any) => {
+      this.animal.id = data.id;
+      this.animal.nome = data.nome;
+      this.animal.tipo = data.tipo;
+      this.animal.raca = data.raca;
+      this.animal.idade = data.idade;
+      this.animal.descricao = data.descricao;
+      this.animal.estado = data.estado;
+      this.animal.cidade = data.cidade;
+      this.animal.sexo = data.sexo;
+      this.animal.porte = data.porte;
+      this.animal.status = data.status;
+    });
   }
 
-  salvar(){
-    this.tokenServico.getUser().subscribe(
-      (data:any) => {
-        this.animal.usuario = data;
-      }
-    );
+  salvar() {
+    this.tokenServico.getUser().subscribe((data: any) => {
+      this.animal.usuario = data;
+    });
     this.animalServico.editarAnimalById(this.animal).subscribe(
-      resolve => {
+      (resolve) => {
         window.alert('Alterado com sucesso');
-      }, err => {
+      },
+      (err) => {
         console.log(err.erro.mensage);
       }
     );

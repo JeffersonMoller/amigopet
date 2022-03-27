@@ -1,4 +1,3 @@
-import { VisualizarAnimalComponent } from './../visualizar-animal/visualizar-animal.component';
 import { Animal } from '../core/interfaces/Animal';
 import { AnimalService } from './../services/animal.service';
 import { Component, OnInit } from '@angular/core';

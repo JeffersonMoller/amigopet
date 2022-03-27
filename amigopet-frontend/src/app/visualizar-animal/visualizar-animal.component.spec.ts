@@ -8,9 +8,8 @@ describe('VisualizarAnimalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VisualizarAnimalComponent ]
-    })
-    .compileComponents();
+      declarations: [VisualizarAnimalComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

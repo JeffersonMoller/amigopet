@@ -1,39 +1,71 @@
 <div class="container-fluid" id="principal">
-    <div class="container mt-5" id="conteudo">
+  <div class="container mt-5" id="conteudo">
+    <div class="card col-md-8">
+      <div class="container text-center" id="titulo">
+        <h1>Perfil</h1>
+      </div>
+      <div class="container">
+        <form action="" method="">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              [(ngModel)]="usuario.nome"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Digite seu email"
+              [(ngModel)]="usuario.email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="celular">Celular:</label>
+            <input
+              type="text"
+              class="form-control"
+              mask="(00) 0000-00000"
+              id="celular"
+              name="celular"
+              placeholder="Digite seu celular"
+              [(ngModel)]="usuario.celular"
+              required
+            />
+          </div>
 
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input
+              type="password"
+              class="form-control"
+              id="senha"
+              name="senha"
+              placeholder="*****"
+              [(ngModel)]="usuario.senha"
+              required
+            />
+          </div>
 
-        <div class="card col-md-8">
-            <div class="container text-center" id="titulo">
-                <h1>Perfil</h1>
-            </div>
-            <div class="container">
-                <form action="" method="">
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome"
-                            [(ngModel)]="usuario.nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu email"
-                            [(ngModel)]="usuario.email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="celular">Celular:</label>
-                        <input type="text" class="form-control" mask="(00) 0000-00000" id="celular" name="celular"
-                            placeholder="Digite seu celular" [(ngModel)]="usuario.celular" required>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="senha">Senha:</label>
-                        <input type="password" class="form-control" id="senha" name="senha" placeholder="*****"
-                            [(ngModel)]="usuario.senha" required>
-                    </div>
-
-                    <button type="submit" class="btn btn-success" (click)="alterarUsuario()">Salvar</button>
-                </form>
-            </div>
-        </div>
+          <button
+            type="submit"
+            class="btn btn-success"
+            (click)="alterarUsuario()"
+          >
+            Salvar
+          </button>
+        </form>
+      </div>
     </div>
+  </div>
 </div>

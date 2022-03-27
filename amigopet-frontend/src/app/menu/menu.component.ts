@@ -1,10 +1,7 @@
 import { TokenServiceService } from './../services/token-service.service';
 import { Observable } from 'rxjs';
-import { UsuarioService } from './../services/usuario.service';
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../core/interfaces/Usuario';
-import { RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-menu',

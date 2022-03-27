@@ -9,7 +9,6 @@ const KEY = 'authToken';
   providedIn: 'root',
 })
 export class TokenServiceService {
-
   private userSubject = new BehaviorSubject<any>(null);
 
   constructor() {
@@ -26,13 +25,12 @@ export class TokenServiceService {
   }
 
   private decodeAndNotify() {
-    let token = (this.getToken() || '{}');
-      const user = jwt_decode(token) as Usuario;
-      this.userSubject.next(user);
-
+    let token = this.getToken() || '{}';
+    const user = jwt_decode(token) as Usuario;
+    this.userSubject.next(user);
   }
 
-  getUser(){
+  getUser() {
     return this.userSubject.asObservable();
   }
 

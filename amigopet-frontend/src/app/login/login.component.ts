@@ -17,9 +17,9 @@ export class LoginComponent implements OnInit {
     private servico: AuthService,
     private router: Router,
     private tokenServico: TokenServiceService
-  ) { }
+  ) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   salvar(): void {
     this.servico.login(this.usuario).subscribe(
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         });
       },
       (erro) => {
-        window.alert("Login/Senha Incorreto!");
+        window.alert('Login/Senha Incorreto!');
       }
     );
   }

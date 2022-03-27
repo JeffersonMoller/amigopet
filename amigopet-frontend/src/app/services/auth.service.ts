@@ -1,5 +1,4 @@
 import { Observable } from 'rxjs';
-import { environment } from './../../environments/environment';
 import { Usuario } from './../core/interfaces/Usuario';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -7,7 +6,7 @@ import { Injectable } from '@angular/core';
 const AUTH_API = 'http://localhost:8080/auth';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-type': 'application/json' }),
 };
 
 @Injectable({
@@ -26,5 +25,4 @@ export class AuthService {
       httpOptions
     );
   }
-
 }

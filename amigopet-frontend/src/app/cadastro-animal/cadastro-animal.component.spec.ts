@@ -8,9 +8,8 @@ describe('CadastroAnimalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CadastroAnimalComponent ]
-    })
-    .compileComponents();
+      declarations: [CadastroAnimalComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

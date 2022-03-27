@@ -1,87 +1,137 @@
 <div class="container-fluid" id="principal">
-    <div class="container">
-        <div class="card cadastro-card">
-            <div class="row no-gutters">
-                <div class="col-md-5">
-                    <img src="../../assets/papagaio.jpg" alt="cadastro" class="cadastro-card-img">
-                </div>
-                <div class="col-md-7">
-                    <div class="card-body">
-                        <p class="cadastro-card-description">Cadastre um animal</p>
-                        <form action="cadastro" method="post">
-                            <div class="form-group">
-                                <label for="text" class="sr-only">Nome</label>
-                                <input type="text" name="nome" id="nome" [(ngModel)]="animal.nome" class="form-control"
-                                    placeholder="Nome">
-                            </div>
-                            <div>
-                                   <select name="Especie" [(ngModel)]="animal.tipo" class="selects">
-                                      <option value="0"> Selecione</option>
-                                      <option value="Gato"> Gato(a) </option>
-                                      <option value="Cachorro"> Cachorro(a)</option>
-                                      <option value="Outros"> Outro</option>
-                                  </select>
-                            </div>
-                            <div class="form-group mb-4">
-                                <label for="raca" class="sr-only">Raça</label>
-                                <input type="text" name="raca" id="raca" [(ngModel)]="animal.raca" class="form-control"
-                                    placeholder="Raça">
-                            </div>
-                            <div>
-                                <label for="idade" class="sr-only">Idade</label>
-                                <input type="number" name="idade" id="idade" class="form-control"
-                                    [(ngModel)]="idadeAnimal" placeholder="idade">
-                            </div>
-                            <div>
-                                <label for="descricao" class="sr-only">Descrição</label>
-                                <input type="text" name="descricao" id="descricao" [(ngModel)]="animal.descricao"
-                                    class="form-control" placeholder="descricao">
-                            </div>
-                            <div>
-                                  <select name="porte" [(ngModel)]="animal.porte" class="selects">
-                                      <option value="0"> Selecione</option>
-                                      <option value="Pequeno"> Pequeno</option>
-                                      <option value="Medio"> Medio</option>
-                                      <option value="Grande"> Grande</option>
-                                  </select>
-                            </div>
-                            <div>
-                              <select name="sexo" [(ngModel)]="sexoAnimal" class="selects">
-                                  <option value="0"> Selecione</option>
-                                  <option value="Macho"> Macho</option>
-                                  <option value="Femea"> Femea</option>
-                              </select>
-                          </div>
-                            <div>
-                                <select name="estado" [(ngModel)]="idEstadoSelecionado" (change)="buscarCidade()"
-                                    class="selects">
-                                    <option value="0"> Selecione</option>
-                                    <option *ngFor="let estado of estados | async" value="{{estado.id}}">{{estado.nome}}
-                                    </option>
-                                </select>
-                            </div>
-                            <div>
-                                <select name="cidade"  [(ngModel)]="idCidadeSelecionada" class="selects">
-                                    <option value="0"> Selecione</option>
-                                    <option *ngFor="let cidade of cidades | async" value="{{cidade.id}}">
-                                        {{cidade.nome}}
-                                    </option>
-                                </select>
-                            </div>
-                            <div>
-                                <input type="file" src="" alt="" >
-                            </div>
-                            <div>
-                                <button (click)="salvar()" class="btn btn-primary">Cadastrar</button>
-                            </div>
-                        </form>
-                        <p class="cadastro-card-footer-text"> Clique <a routerLink="/home" class="text-reset"> aqui</a>
-                            para voltar</p>
-                        <nav class="cadastro-card-footer-nav">
-                        </nav>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="card cadastro-card">
+      <div class="row no-gutters">
+        <div class="col-md-5">
+          <img
+            src="../../assets/papagaio.jpg"
+            alt="cadastro"
+            class="cadastro-card-img"
+          />
         </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <p class="cadastro-card-description">Cadastre um animal</p>
+            <form action="cadastro" method="post">
+              <div class="form-group">
+                <label for="text" class="sr-only">Nome</label>
+                <input
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  [(ngModel)]="animal.nome"
+                  class="form-control"
+                  placeholder="Nome"
+                />
+              </div>
+              <div>
+                <select
+                  name="Especie"
+                  [(ngModel)]="animal.tipo"
+                  class="selects"
+                >
+                  <option value="0">Selecione</option>
+                  <option value="Gato">Gato(a)</option>
+                  <option value="Cachorro">Cachorro(a)</option>
+                  <option value="Outros">Outro</option>
+                </select>
+              </div>
+              <div class="form-group mb-4">
+                <label for="raca" class="sr-only">Raça</label>
+                <input
+                  type="text"
+                  name="raca"
+                  id="raca"
+                  [(ngModel)]="animal.raca"
+                  class="form-control"
+                  placeholder="Raça"
+                />
+              </div>
+              <div>
+                <label for="idade" class="sr-only">Idade</label>
+                <input
+                  type="number"
+                  name="idade"
+                  id="idade"
+                  class="form-control"
+                  [(ngModel)]="idadeAnimal"
+                  placeholder="idade"
+                />
+              </div>
+              <div>
+                <label for="descricao" class="sr-only">Descrição</label>
+                <input
+                  type="text"
+                  name="descricao"
+                  id="descricao"
+                  [(ngModel)]="animal.descricao"
+                  class="form-control"
+                  placeholder="descricao"
+                />
+              </div>
+              <div>
+                <select name="porte" [(ngModel)]="animal.porte" class="selects">
+                  <option value="0">Selecione</option>
+                  <option value="Pequeno">Pequeno</option>
+                  <option value="Medio">Medio</option>
+                  <option value="Grande">Grande</option>
+                </select>
+              </div>
+              <div>
+                <select name="sexo" [(ngModel)]="sexoAnimal" class="selects">
+                  <option value="0">Selecione</option>
+                  <option value="Macho">Macho</option>
+                  <option value="Femea">Femea</option>
+                </select>
+              </div>
+              <div>
+                <select
+                  name="estado"
+                  [(ngModel)]="idEstadoSelecionado"
+                  (change)="buscarCidade()"
+                  class="selects"
+                >
+                  <option value="0">Selecione</option>
+                  <option
+                    *ngFor="let estado of estados | async"
+                    value="{{ estado.id }}"
+                  >
+                    {{ estado.nome }}
+                  </option>
+                </select>
+              </div>
+              <div>
+                <select
+                  name="cidade"
+                  [(ngModel)]="idCidadeSelecionada"
+                  class="selects"
+                >
+                  <option value="0">Selecione</option>
+                  <option
+                    *ngFor="let cidade of cidades | async"
+                    value="{{ cidade.id }}"
+                  >
+                    {{ cidade.nome }}
+                  </option>
+                </select>
+              </div>
+              <div>
+                <input type="file" src="" alt="" />
+              </div>
+              <div>
+                <button (click)="salvar()" class="btn btn-primary">
+                  Cadastrar
+                </button>
+              </div>
+            </form>
+            <p class="cadastro-card-footer-text">
+              Clique <a routerLink="/home" class="text-reset"> aqui</a> para
+              voltar
+            </p>
+            <nav class="cadastro-card-footer-nav"></nav>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

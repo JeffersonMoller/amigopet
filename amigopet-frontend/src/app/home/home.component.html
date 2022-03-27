@@ -1,19 +1,19 @@
-
 <app-filtro></app-filtro>
 <div class="container-fluid">
   <div class="container" id="principal">
-
-    <a *ngFor="let animal of animais | async"  routerLink="/visualizar/{{animal.id}}">
-      <div class="card" style="width: 18rem;" id="grow">
-        <img src="../../assets/gatoindex.jpg" class="card-img-top">
+    <a
+      *ngFor="let animal of animais | async"
+      routerLink="/visualizar/{{ animal.id }}"
+    >
+      <div class="card" style="width: 18rem" id="grow">
+        <img src="../../assets/gatoindex.jpg" class="card-img-top" />
         <div class="card-body">
-          <h5 class="card-title">{{animal.nome}}</h5>
-          <p class="card-text">Sexo: {{animal.sexo}}</p>
-          <p class="card-text">Raça: {{animal.raca}}</p>
+          <h5 class="card-title">{{ animal.nome }}</h5>
+          <p class="card-text">Sexo: {{ animal.sexo }}</p>
+          <p class="card-text">Raça: {{ animal.raca }}</p>
           <button class="grow_skew_forward">Visualizar</button>
         </div>
       </div>
     </a>
-
   </div>
 </div>

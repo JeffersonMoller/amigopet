@@ -8,35 +8,33 @@ import { TokenServiceService } from '../services/token-service.service';
 @Component({
   selector: 'app-pets',
   templateUrl: './pets.component.html',
-  styleUrls: ['./pets.component.scss']
+  styleUrls: ['./pets.component.scss'],
 })
 export class PetsComponent implements OnInit {
-
-  constructor(private animalServico:AnimalService, private userServico: TokenServiceService) { }
+  constructor(
+    private animalServico: AnimalService,
+    private userServico: TokenServiceService
+  ) {}
 
   animais: Observable<Animal[]> = new Observable();
   user?: Observable<Usuario>;
-  idUsuario:string = "0";
+  idUsuario: string = '0';
 
   ngOnInit(): void {
-    this.userServico.getUser()
-    .subscribe(
-      (resolve) => {
-        this.idUsuario = resolve.id;
-        this.getAnimaisByIdUser();
-      }
-    );
+    this.userServico.getUser().subscribe((resolve) => {
+      this.idUsuario = resolve.id;
+      this.getAnimaisByIdUser();
+    });
   }
 
-  getAnimaisByIdUser(){
+  getAnimaisByIdUser() {
     this.animais = this.animalServico.getAnimalByUser(this.idUsuario);
   }
 
-  doados(){
+  doados() {
     this.animais = this.animalServico.listaAnimalByStatus('D', this.idUsuario);
   }
-  ativos(){
+  ativos() {
     this.animais = this.animalServico.listaAnimalByStatus('A', this.idUsuario);
   }
-
 }

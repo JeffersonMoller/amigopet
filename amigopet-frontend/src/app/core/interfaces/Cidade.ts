@@ -1,6 +1,4 @@
-export interface Cidade{
-    
-    id?:string;
-    nome?:string;
-    
+export interface Cidade {
+  id?: string;
+  nome?: string;
 }

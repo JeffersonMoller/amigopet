@@ -1,5 +1,4 @@
-export interface Estado{
-
-    id?:string;
-    nome?:string;
+export interface Estado {
+  id?: string;
+  nome?: string;
 }

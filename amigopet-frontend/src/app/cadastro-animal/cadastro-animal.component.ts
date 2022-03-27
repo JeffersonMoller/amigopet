@@ -24,7 +24,7 @@ export class CadastroAnimalComponent implements OnInit {
   idadeAnimal?: number;
   cidadeNome?: string = '0';
   animais?: Animal[];
-  animal: Animal = { tipo: "0", porte: "0" };
+  animal: Animal = { tipo: '0', porte: '0' };
   user$: Observable<Usuario>;
   user: Usuario = {};
 
@@ -82,7 +82,7 @@ export class CadastroAnimalComponent implements OnInit {
       );
       this.animal = new Animal();
     } else {
-      window.alert("Animal precisa de um nome!");
+      window.alert('Animal precisa de um nome!');
     }
   }
 }

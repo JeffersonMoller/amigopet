@@ -1,24 +1,33 @@
 <div class="container-fluid" id="principal">
-    <div class="container mt-5">
-
-        <div class="row" id="botao">
-            <button routerLink="/novadica" class="slide_from_left"><strong>+</strong>Add Dica</button>
-        </div>
-
-        <a href="http://localhost:4200/verdica" *ngFor="let dica of dicas | async" routerLink='/verdica/{{dica.id}}'>
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="card-img" src="../../assets/papagaio.jpg" alt="Card image cap">
-                    </div>
-                    <div class="col-md-8">
-                        <div id="conteudo">
-                            <h3>{{dica.titulo}}</h3>
-                            <p>{{dica.descricao}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
+  <div class="container mt-5">
+    <div class="row" id="botao">
+      <button routerLink="/novadica" class="slide_from_left">
+        <strong>+</strong>Add Dica
+      </button>
     </div>
+
+    <a
+      href="http://localhost:4200/verdica"
+      *ngFor="let dica of dicas | async"
+      routerLink="/verdica/{{ dica.id }}"
+    >
+      <div class="card">
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              class="card-img"
+              src="../../assets/papagaio.jpg"
+              alt="Card image cap"
+            />
+          </div>
+          <div class="col-md-8">
+            <div id="conteudo">
+              <h3>{{ dica.titulo }}</h3>
+              <p>{{ dica.descricao }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
 </div>

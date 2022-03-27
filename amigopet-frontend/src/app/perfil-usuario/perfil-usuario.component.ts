@@ -10,13 +10,14 @@ import { UsuarioService } from '../services/usuario.service';
 @Component({
   selector: 'app-perfil-usuario',
   templateUrl: './perfil-usuario.component.html',
-  styleUrls: ['./perfil-usuario.component.scss']
+  styleUrls: ['./perfil-usuario.component.scss'],
 })
 export class PerfilUsuarioComponent implements OnInit {
-
-  constructor(private estadoServico: EstadoService, private tokenService: TokenServiceService, private usuarioServico: UsuarioService) {
-
-  }
+  constructor(
+    private estadoServico: EstadoService,
+    private tokenService: TokenServiceService,
+    private usuarioServico: UsuarioService
+  ) {}
 
   estados: Observable<Estado[]> = new Observable();
   cidades: Observable<Cidade[]> = new Observable();
@@ -35,16 +36,14 @@ export class PerfilUsuarioComponent implements OnInit {
 
   buscarCidade() {
     this.cidades = this.estadoServico.buscarCidade(this.idEstadoSelecionado);
-    this.cidades.subscribe(
-      resolve => console.log(resolve)
-    );
+    this.cidades.subscribe((resolve) => console.log(resolve));
   }
 
   alterarUsuario() {
-    if ( this.usuario.senha != null){
-    this.usuarioServico.alterar(this.usuario);
+    if (this.usuario.senha != null) {
+      this.usuarioServico.alterar(this.usuario);
     } else {
-      window.alert("A senha não pode ser vazia");
+      window.alert('A senha não pode ser vazia');
     }
   }
 
@@ -56,7 +55,6 @@ export class PerfilUsuarioComponent implements OnInit {
       this.usuario.email = resolve.email;
       this.usuario.celular = resolve.celular;
       this.usuario.senha = resolve.senha;
-    }
-    );
+    });
   }
 }

@@ -8,9 +8,8 @@ describe('ListOngComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListOngComponent ]
-    })
-    .compileComponents();
+      declarations: [ListOngComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

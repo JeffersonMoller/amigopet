@@ -27,7 +27,6 @@ import { CadastrarDicaComponent } from './cadastrar-dica/cadastrar-dica.componen
 import { EditAnimalComponent } from './edit-animal/edit-animal.component';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 
-
 const maskConfig: Partial<IConfig> = {
   validation: false,
 };
@@ -54,7 +53,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) | null = null;
     CadastroAnimalComponent,
     CadastrarDicaComponent,
     EditarDicaComponent,
-    EditAnimalComponent
+    EditAnimalComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,10 +61,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) | null = null;
     NgbModule,
     FormsModule,
     HttpClientModule,
-    NgxMaskModule.forRoot(maskConfig) 
+    NgxMaskModule.forRoot(maskConfig),
   ],
   providers: [EstadoService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}

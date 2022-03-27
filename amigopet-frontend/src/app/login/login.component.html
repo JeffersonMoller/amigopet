@@ -1,37 +1,60 @@
 <div class="container-fluid" id="principal">
-
-    <div class="container">
-        <div class="card login-card">
-            <div class="row no-gutters">
-                <div class="col-md-5">
-                    <img src="../../assets/papagaio.jpg" alt="login" class="login-card-img">
-                </div>
-                <div class="col-md-7">
-                    <div class="card-body">
-                        <div class="brand-wrapper">
-                        </div>
-                        <p class="login-card-description">Entre na sua Conta</p>
-                        <form action="login" method="post">
-                            <div class="form-group">
-                                <label for="login" class="sr-only">E-mail</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" [(ngModel)]="usuario.email">
-                            </div>
-                            <div class="form-group mb-4">
-                                <label for="password" class="sr-only">Password</label>
-                                <input type="password" name="password" id="password" class="form-control"
-                                    placeholder="***********" [(ngModel)]="usuario.senha">
-                            </div>
-                            <input type="submit" id="login" class="btn btn-block login-btn mb-4" (click)="salvar()" type="button"
-                                value="Login">
-                        </form>
-                        <p class="login-card-footer-text"> Não tem uma conta? <a routerLink="/cadastro"
-                                class="text-reset"> Clique aqui para se cadastrar</a></p>
-                        <nav class="login-card-footer-nav">
-                        </nav>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="card login-card">
+      <div class="row no-gutters">
+        <div class="col-md-5">
+          <img
+            src="../../assets/papagaio.jpg"
+            alt="login"
+            class="login-card-img"
+          />
         </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <div class="brand-wrapper"></div>
+            <p class="login-card-description">Entre na sua Conta</p>
+            <form action="login" method="post">
+              <div class="form-group">
+                <label for="login" class="sr-only">E-mail</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="E-mail"
+                  [(ngModel)]="usuario.email"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <label for="password" class="sr-only">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  placeholder="***********"
+                  [(ngModel)]="usuario.senha"
+                />
+              </div>
+              <input
+                type="submit"
+                id="login"
+                class="btn btn-block login-btn mb-4"
+                (click)="salvar()"
+                type="button"
+                value="Login"
+              />
+            </form>
+            <p class="login-card-footer-text">
+              Não tem uma conta?
+              <a routerLink="/cadastro" class="text-reset">
+                Clique aqui para se cadastrar</a
+              >
+            </p>
+            <nav class="login-card-footer-nav"></nav>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </div>
