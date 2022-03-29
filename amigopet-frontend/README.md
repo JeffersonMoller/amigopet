@@ -1,4 +1,7 @@
 # AmigoPet
+[![Build Status](https://travis-ci.org/codecentric/springboot-sample-app.svg?branch=master)](https://travis-ci.org/codecentric/springboot-sample-app)
+[![Coverage Status](https://coveralls.io/repos/github/codecentric/springboot-sample-app/badge.svg?branch=master)](https://coveralls.io/github/codecentric/springboot-sample-app?branch=master)
+![](https://img.shields.io/appveyor/tests/thiagoloureiro/dapper-crud-extension.svg)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
 
